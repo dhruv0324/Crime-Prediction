@@ -1,0 +1,103 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+
+# Virtual Environments
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# MLflow
+.mlflow/
+
+# DVC
+.dvc/tmp/
+.dvc/cache/
+*.dvc
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Environment variables
+.env
+.env.local
+
+# Logs
+*.log
+logs/
+
+# Model artifacts (will be tracked by MLflow/DVC)
+models/
+artifacts/
+*.pkl
+*.joblib
+*.h5
+*.onnx
+*.pt
+*.pth
+
+# Data (tracked by DVC instead)
+data/external/*
+!data/external/.gitkeep
+
+# Docker
+.dockerignore
+
+# OS
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Cloud credentials
+*.pem
+*.key
+credentials.json

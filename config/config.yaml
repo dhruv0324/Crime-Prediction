@@ -1,0 +1,84 @@
+# Crime Prediction MLOps Pipeline Configuration
+
+# Data Configuration
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  external_dir: "data/external"
+  
+  # Dataset paths
+  raw_data_file: "data/raw/communities.data"
+  raw_names_file: "data/raw/communities.names"
+  
+  # Split configuration
+  test_size: 0.2
+  val_size: 0.15
+  random_state: 42
+  
+  # Preprocessing
+  missing_value_threshold: 0.5  # Drop features with >50% missing values
+  correlation_threshold: 0.95    # Remove highly correlated features
+
+# Model Configuration
+model:
+  # Model registry
+  registry_uri: "mlruns"
+  experiment_name: "crime_prediction"
+  
+  # Training
+  random_state: 42
+  cv_folds: 5
+  
+  # Target variable
+  target_column: "ViolentCrimesPerPop"
+  
+  # Non-predictive columns
+  non_predictive_columns:
+    - "state"
+    - "county"
+    - "community"
+    - "communityname"
+    - "fold"
+
+# Evaluation Metrics
+metrics:
+  primary: "rmse"  # Primary metric for model selection
+  additional:
+    - "mae"
+    - "r2"
+    - "mape"
+
+# API Configuration
+api:
+  host: "0.0.0.0"
+  port: 8000
+  reload: false  # Set to True for development
+  log_level: "info"
+  
+  # Model serving
+  model_registry_name: "CrimePredictionModel"
+  model_stage: "Production"  # Staging, Production, Archived
+
+# MLOps Configuration
+mlops:
+  # MLflow
+  mlflow:
+    tracking_uri: "file:./mlruns"  # Change to remote URI for production
+    experiment_name: "crime_prediction"
+  
+  # Weights & Biases (optional)
+  wandb:
+    project: "crime-prediction"
+    entity: null  # Your W&B entity/team
+    enabled: true
+  
+  # DVC
+  dvc:
+    remote: "local"  # Can be changed to S3, GCS, Azure, etc.
+    remote_url: "./dvc-storage"  # Local storage path
+
+# Logging
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/crime_prediction.log"

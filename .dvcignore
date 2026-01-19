@@ -1,0 +1,9 @@
+# DVC ignore patterns
+*.pyc
+__pycache__/
+*.log
+.mlflow/
+mlruns/
+.venv/
+venv/
+env/
