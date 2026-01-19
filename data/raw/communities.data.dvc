@@ -1,0 +1,5 @@
+outs:
+- md5: ce564679a46f4313b9e8d17e1dad0ceb
+  size: 1102815
+  hash: md5
+  path: communities.data

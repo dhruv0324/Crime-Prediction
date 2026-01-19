@@ -1,0 +1,5 @@
+outs:
+- md5: 2169c8c99098943e7b9404ee97e62eba
+  size: 27179
+  hash: md5
+  path: communities.names
