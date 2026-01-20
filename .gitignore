@@ -59,9 +59,10 @@ venv.bak/
 .dvc/tmp/
 .dvc/cache/
 data/raw/*
+data/processed/*
 !data/raw/.gitkeep
 !data/raw/*.dvc  
-data/processed/*
+!data/processed/*.dvc
 !data/processed/.gitkeep
 
 # Cursor IDE

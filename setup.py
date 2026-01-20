@@ -14,7 +14,7 @@ setup(
     description="MLOps pipeline for crime prediction using Communities dataset",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/crime-prediction",
+    url="https://github.com/dhruv0324/Crime-Prediction.git",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     classifiers=[
