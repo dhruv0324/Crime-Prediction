@@ -172,20 +172,6 @@ The project is configured for deployment on:
 - **GCP**: Cloud Run, AI Platform
 - **Azure**: Container Instances, ML Service
 
-See deployment documentation for platform-specific instructions.
-
-## 📝 License
-
-MIT License
-
-## 🤝 Contributing
-
-Contributions are welcome! Please read the contributing guidelines before submitting pull requests.
-
-## 📧 Contact
-
-For questions or issues, please open an issue on GitHub.
-
 ---
 
 **Note**: This is a learning project demonstrating MLOps best practices. For production use, ensure proper security, monitoring, and compliance measures are in place.
